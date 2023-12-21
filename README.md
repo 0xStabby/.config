@@ -13,10 +13,10 @@ Clone the repo into .config without clearing and only overriding files that are 
    ```sh
     cd ~/.config
     git init
-    git remote add origin <your-repo-url>
+    git remote add origin git@github.com:0xStabby/.config.git
     git pull
-    git checkout main -f
-    git branch --set-upstream-to origin/main
+    git checkout master -f
+    git branch --set-upstream-to origin/master
     git submodule update --init --recursive
    ```
 
