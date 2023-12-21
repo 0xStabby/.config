@@ -11,13 +11,7 @@ Follow the installation instructions to get setup
 ### Installation
 Clone the repo into .config without clearing and only overriding files that are there
    ```sh
-    cd ~/.config
-    git init
-    git remote add origin <your-repo-url>
-    git pull
-    git checkout main -f
-    git branch --set-upstream-to origin/main
-    git submodule update --init --recursive
+    https://github.com/0xStabby/.config/blob/master/cloneconfig.sh
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
