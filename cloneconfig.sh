@@ -7,4 +7,6 @@ git branch --set-upstream-to origin/master
 git submodule update --init --recursive
 
 # set bash to look in ~/.config/bash instead of home dir
-sudo echo 'source "$XDG_CONFIG_HOME/bash/.bash_profile"' >> /etc/bash.bashrc
+echo "Need sudo:"
+read -sp "Enter Password: " password
+echo "$password" | sudo -S echo 'source "$XDG_CONFIG_HOME/bash/.bash_profile"' >> /etc/bash.bashrc
