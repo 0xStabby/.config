@@ -25,3 +25,7 @@ for line in "${lines_to_add[@]}"; do
     echo "Line already exists: $line"
   fi
 done
+
+# setup vim plugins
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/vim/bundle/Vundle.vim
+vim +PluginInstall +qall
