@@ -29,3 +29,6 @@ done
 # setup vim plugins
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/vim/bundle/Vundle.vim
 vim +PluginInstall +qall
+
+# set caps to control permanently
+localectl set-x11-keymap "" "" "" ctrl:swapcaps
