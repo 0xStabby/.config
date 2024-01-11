@@ -4,7 +4,7 @@ git remote add origin git@github.com:0xStabby/.config.git
 git pull
 git checkout master -f
 git branch --set-upstream-to origin/master
-git submodule update --init --recursive
+git submodule update --init --recursive --remote
 
 # Define the lines to be added
 lines_to_add=(

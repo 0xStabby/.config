@@ -6,4 +6,4 @@
 	url = git@github.com:0xStabby/tmux.git
 [submodule "bash"]
 	path = bash
-	url = ./bash
+	url = git@github.com:0xStabby/bash.git
