@@ -98,7 +98,7 @@ curl https://sh.rustup.rs -sSf | sh -s -- -y
 # get everything I could need for go
 sudo pacman -S bison --noconfirm
 bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
-mv -rf ~/.gvm ~/.config/.gvm
+mv ~/.gvm ~/.config/.gvm
 source ~/.config/bash/.bash_profile
 gvm install go1.4
 gvm use go1.4 [--default]
