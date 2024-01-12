@@ -55,8 +55,3 @@ chmod +x setup.sh
 # cleanup uneeded rofi-repo
 cd ../
 rm -rf rofi-repo
-
-# get additional i3 scripts setup
-git clone git@github.com:0xStabby/i3-scripts.git
-sudo mv `\ls -1 ./i3-scripts/* | grep -v .git/` /usr/bin/
-rm -rf i3-scripts
