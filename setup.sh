@@ -99,16 +99,12 @@ curl https://sh.rustup.rs -sSf | sh -s -- -y
 sudo pacman -S bison --noconfirm
 bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
 source ~/.gvm/scripts/gvm
-gvm install go1.4
-gvm use go1.4 [--default]
 
 gvm install go1.4 -B
 gvm use go1.4
 export GOROOT_BOOTSTRAP=$GOROOT
 gvm install go1.7
 
-gvm use go1.4
-export GOROOT_BOOTSTRAP=$GOROOT
 gvm install go1.17.13
 gvm use go1.17.13
 export GOROOT_BOOTSTRAP=$GOROOT
