@@ -100,7 +100,7 @@ sudo pacman -S bison --noconfirm
 bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
 source ~/.gvm/scripts/gvm
 
-gvm install go1.4 -B
+gvm install go1.4 -B --default
 gvm use go1.4
 export GOROOT_BOOTSTRAP=$GOROOT
 gvm install go1.7
