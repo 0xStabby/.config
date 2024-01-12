@@ -56,6 +56,29 @@ chmod +x setup.sh
 cd ../
 rm -rf rofi-repo
 
+# update mirrors
+sudo echo "
+## Score: 0.7, United States
+Server = http://mirror.us.leaseweb.net/archlinux/$repo/os/$arch
+## Score: 0.8, United States
+Server = http://lug.mtu.edu/archlinux/$repo/os/$arch
+Server = http://mirror.nl.leaseweb.net/archlinux/$repo/os/$arch
+## Score: 0.9, United Kingdom
+Server = http://mirror.bytemark.co.uk/archlinux/$repo/os/$arch
+## Score: 1.5, United Kingdom
+Server = http://mirrors.manchester.m247.com/arch-linux/$repo/os/$arch
+Server = http://archlinux.dcc.fc.up.pt/$repo/os/$arch
+## Score: 6.6, United States
+Server = http://mirror.cs.pitt.edu/archlinux/$repo/os/$arch
+## Score: 6.7, United States
+Server = http://mirrors.acm.wpi.edu/archlinux/$repo/os/$arch
+## Score: 6.8, United States
+Server = http://ftp.osuosl.org/pub/archlinux/$repo/os/$arch
+## Score: 7.1, India
+Server = http://mirror.cse.iitk.ac.in/archlinux/$repo/os/$arch
+## Score: 10.1, United States
+Server = http://mirrors.xmission.com/archlinux/$repo/os/$arch
+" > /etc/pacman.d/mirrorlist
 
 # setup dev tools
 # first lets get nodejs/pnpm/nvm
