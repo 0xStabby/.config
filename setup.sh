@@ -94,6 +94,7 @@ vercel
 # get everything I could need for go
 sudo pacman -S bison --noconfirm
 bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+source ~/.config/bash/.bash_profile
 gvm install go1.4
 gvm use go1.4 [--default]
 
