@@ -91,6 +91,9 @@ turbo \
 vercel
 
 
+# install rust and cargo
+curl https://sh.rustup.rs -sSf | sh
+
 # get everything I could need for go
 sudo pacman -S bison --noconfirm
 bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
