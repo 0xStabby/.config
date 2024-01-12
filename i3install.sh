@@ -29,7 +29,7 @@ sudo echo "[greeter]
 
 # get additional i3 scripts setup
 # depends on cmatrix
-sudo pacman -S cmatrix
+sudo pacman -S cmatrix --no-confirm
 git clone git@github.com:0xStabby/i3-scripts.git
 sudo mv `\ls -1 ./i3-scripts/* | grep -v .git/` /usr/bin/
 rm -rf i3-scripts
