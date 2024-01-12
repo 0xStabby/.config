@@ -59,7 +59,7 @@ rm -rf rofi-repo
 
 # setup dev tools
 # first lets get nodejs/pnpm/nvm
-pacman -S nodejs pnpm --no-confirm
+sudo pacman -S nodejs pnpm --no-confirm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -82,7 +82,7 @@ pnpm add -g vercel
 
 
 # get everything I could need for go
-pacman -S bison --no-confirm
+sudo pacman -S bison --no-confirm
 bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
 gvm install go1.4
 gvm use go1.4 [--default]
