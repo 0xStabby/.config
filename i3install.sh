@@ -1,26 +1,26 @@
-sudo pacman -S xorg-server xorg-apps xorg-xinit --no-confirm
-sudo pacman -S i3-gaps i3blocks i3lock numlockx --no-confirm
+sudo pacman -S xorg-server xorg-apps xorg-xinit --noconfirm
+sudo pacman -S i3-gaps i3blocks i3lock numlockx --noconfirm
 
-sudo pacman -S lightdm lightdm-gtk-greeter --needed --no-confirm
+sudo pacman -S lightdm lightdm-gtk-greeter --needed --noconfirm
 sudo systemctl enable lightdm
 
-sudo pacman -S noto-fonts ttf-ubuntu-font-family ttf-dejavu ttf-freefont --no-confirm
-sudo pacman -S ttf-liberation ttf-droid ttf-roboto terminus-font --no-confirm
+sudo pacman -S noto-fonts ttf-ubuntu-font-family ttf-dejavu ttf-freefont --noconfirm
+sudo pacman -S ttf-liberation ttf-droid ttf-roboto terminus-font --noconfirm
 
-sudo pacman -S rxvt-unicode ranger rofi dmenu --needed --no-confirm
+sudo pacman -S rxvt-unicode ranger rofi dmenu --needed --noconfirm
 
-sudo pacman -S firefox vlc --needed --no-confirm
+sudo pacman -S firefox vlc --needed --noconfirm
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-sudo pacman -S lxappearance --no-confirm
+sudo pacman -S lxappearance --noconfirm
 
-sudo pacman -S arc-gtk-theme --no-confirm
-sudo pacman -S papirus-icon-theme --no-confirm
+sudo pacman -S arc-gtk-theme --noconfirm
+sudo pacman -S papirus-icon-theme --noconfirm
 
-sudo pacman -S gnome-terminal --needed --no-confirm
-sudo pacman -S feh picom --no-confirm
-sudo pacman -S tmux --no-confirm
+sudo pacman -S gnome-terminal --needed --noconfirm
+sudo pacman -S feh picom --noconfirm
+sudo pacman -S tmux --noconfirm
 
 sudo echo "[greeter]
    theme-name = Arc-Dark
@@ -29,7 +29,7 @@ sudo echo "[greeter]
 
 # get additional i3 scripts setup
 # depends on cmatrix
-sudo pacman -S cmatrix --no-confirm
+sudo pacman -S cmatrix --noconfirm
 git clone git@github.com:0xStabby/i3-scripts.git
 sudo mv `\ls -1 ./i3-scripts/* | grep -v .git/` /usr/bin/
 rm -rf i3-scripts
