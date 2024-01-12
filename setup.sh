@@ -61,26 +61,37 @@ rm -rf rofi-repo
 
 # update mirrors
 echo "
-## Score: 0.7, United States
-Server = http://mirror.us.leaseweb.net/archlinux/$repo/os/$arch
-## Score: 0.8, United States
-Server = http://lug.mtu.edu/archlinux/$repo/os/$arch
-Server = http://mirror.nl.leaseweb.net/archlinux/$repo/os/$arch
-## Score: 0.9, United Kingdom
-Server = http://mirror.bytemark.co.uk/archlinux/$repo/os/$arch
-## Score: 1.5, United Kingdom
-Server = http://mirrors.manchester.m247.com/arch-linux/$repo/os/$arch
-Server = http://archlinux.dcc.fc.up.pt/$repo/os/$arch
-## Score: 6.6, United States
-Server = http://mirror.cs.pitt.edu/archlinux/$repo/os/$arch
-## Score: 6.7, United States
-Server = http://mirrors.acm.wpi.edu/archlinux/$repo/os/$arch
-## Score: 6.8, United States
-Server = http://ftp.osuosl.org/pub/archlinux/$repo/os/$arch
-## Score: 7.1, India
-Server = http://mirror.cse.iitk.ac.in/archlinux/$repo/os/$arch
-## Score: 10.1, United States
-Server = http://mirrors.xmission.com/archlinux/$repo/os/$arch
+##
+## Manjaro Linux default mirrorlist
+## Generated on 2024-01-11 14:07
+##
+## Please use 'pacman-mirrors -f [NUMBER] [NUMBER]' to modify mirrorlist
+## (Use 0 for all mirrors)
+##
+
+## Country : Global
+Server = https://mirrors2.manjaro.org/stable/$repo/$arch
+
+## Country : United_States
+Server = https://ohioix.mm.fcix.net/manjaro/stable/$repo/$arch
+
+## Country : Belgium
+Server = https://mirror.futureweb.be/manjaro/stable/$repo/$arch
+
+## Country : Sweden
+Server = https://ftp.lysator.liu.se/pub/manjaro/stable/$repo/$arch
+
+## Country : Spain
+Server = https://ftp.caliu.cat/pub/distribucions/manjaro/stable/$repo/$arch
+
+## Country : Russia
+Server = https://mirror.truenetwork.ru/manjaro/stable/$repo/$arch
+
+## Country : Portugal
+Server = http://ftp.dei.uc.pt/pub/linux/manjaro/stable/$repo/$arch
+
+## Country : China
+Server = https://mirrors.tuna.tsinghua.edu.cn/manjaro/stable/$repo/$arch
 " | sudo tee /etc/pacman.d/mirrorlist > /dev/null
 sudo pacman -Syu
 
