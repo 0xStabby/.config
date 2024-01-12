@@ -26,9 +26,23 @@ for line in "${lines_to_add[@]}"; do
   fi
 done
 
+clone_or_check_repo() {
+  local github_repo_url="$1"
+  local directory_path="$2"
+
+  # Check if the directory exists
+  if [ -d "$directory_path" ]; then
+    echo "Directory already exists: $directory_path"
+  else
+    # Clone the GitHub repository
+    git clone "$github_repo_url" "$directory_path"
+    echo "Cloned GitHub repository to: $directory_path"
+  fi
+}
+
 # setup vim plugins
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/vim/bundle/Vundle.vim
+clone_or_check_repo "https://github.com/VundleVim/Vundle.vim.git" "/vim/bundle/Vundle.vim"
 vim +PluginInstall +qall
 
 # set caps to control permanently
-localectl set-x11-keymap "" "" "" ctrl:swapcaps
+localectl set-x11-keymap "" "" "" ctrl:nocaps
