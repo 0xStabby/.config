@@ -18,7 +18,7 @@ sudo pacman -S lxappearance --noconfirm
 sudo pacman -S arc-gtk-theme --noconfirm
 sudo pacman -S papirus-icon-theme --noconfirm
 
-sudo pacman -S gnome-terminal --needed --noconfirm
+sudo pacman -S gnome-terminal ncdu --needed --noconfirm
 sudo pacman -S feh picom --noconfirm
 sudo pacman -S tmux --noconfirm
 
