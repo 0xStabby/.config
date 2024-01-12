@@ -46,3 +46,13 @@ vim +PluginInstall +qall
 
 # set caps to control permanently
 localectl set-x11-keymap "" "" "" ctrl:nocaps
+
+# get rofi themes
+git clone --depth=1 https://github.com/adi1090x/rofi.git rofi-repo
+cd rofi-repo
+chmod +x setup.sh
+./setup.sh
+
+# cleanup uneeded rofi-repo
+cd ../
+rm -rf rofi-repo
