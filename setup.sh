@@ -1,3 +1,6 @@
+echo "I need sudo later but will ask now"
+sudo echo "✅"
+
 cd ~/.config
 git init
 git remote add origin git@github.com:0xStabby/.config.git
@@ -57,7 +60,7 @@ cd ../
 rm -rf rofi-repo
 
 # update mirrors
-sudo echo "
+echo "
 ## Score: 0.7, United States
 Server = http://mirror.us.leaseweb.net/archlinux/$repo/os/$arch
 ## Score: 0.8, United States
@@ -78,7 +81,8 @@ Server = http://ftp.osuosl.org/pub/archlinux/$repo/os/$arch
 Server = http://mirror.cse.iitk.ac.in/archlinux/$repo/os/$arch
 ## Score: 10.1, United States
 Server = http://mirrors.xmission.com/archlinux/$repo/os/$arch
-" > /etc/pacman.d/mirrorlist
+" | sudo tee /etc/pacman.d/mirrorlist > /dev/null
+sudo pacman -Syu
 
 # setup dev tools
 # first lets get nodejs/pnpm/nvm
