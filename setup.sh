@@ -115,6 +115,11 @@ gvm use go1.20
 # mv ~/.gvm ~/.config/.gvm
 # source ~/.config/bash/.bash_profile
 
+# install python tools
+python -m ensurepip --upgrade
+# this is really i3 specific so should move from this script yet, but using python to install so here we are.
+pip install --user bumblebee-status
+
 
 # install crypto stuff
 yay -S frame-eth --noconfirm
