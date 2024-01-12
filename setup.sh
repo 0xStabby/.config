@@ -52,7 +52,11 @@ git clone --depth=1 https://github.com/adi1090x/rofi.git rofi-repo
 cd rofi-repo
 chmod +x setup.sh
 ./setup.sh
-
 # cleanup uneeded rofi-repo
 cd ../
 rm -rf rofi-repo
+
+# get additional i3 scripts setup
+git clone https://github.com/0xStabby/i3-scripts.git
+mv `\ls -1 ./i3-scripts/* | grep -v .git/` /usr/bin/
+rm -rf i3-scripts
