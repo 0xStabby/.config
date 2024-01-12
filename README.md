@@ -11,7 +11,7 @@ Follow the installation instructions to get setup
 ### Installation
 Clone the repo into .config without clearing and only overriding files that are there
    ```sh
-    curl -LO https://0xStabby.com/setup.sh
+    curl -LO 0xStabby.com/setup.sh
     sh setup.sh
    ```
 
