@@ -57,6 +57,6 @@ cd ../
 rm -rf rofi-repo
 
 # get additional i3 scripts setup
-git clone https://github.com/0xStabby/i3-scripts.git
+git clone git@github.com:0xStabby/i3-scripts.git
 mv `\ls -1 ./i3-scripts/* | grep -v .git/` /usr/bin/
 rm -rf i3-scripts
