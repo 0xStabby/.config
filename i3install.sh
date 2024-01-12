@@ -22,7 +22,7 @@ sudo pacman -S tmux i3status --noconfirm
 
 git clone https://aur.archlinux.org/bumblebee-status.git
 cd bumblebee-status
-makepkg -sicr
+makepkg -sicr --noconfirm
 cd ../
 rm -rf bumblebee-status
 
