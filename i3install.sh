@@ -20,6 +20,12 @@ sudo pacman -S gnome-terminal ncdu --needed --noconfirm
 sudo pacman -S feh picom --noconfirm
 sudo pacman -S tmux --noconfirm
 
+git clone https://aur.archlinux.org/bumblebee-status.git
+cd bumblebee-status
+makepkg -sicr
+cd ../
+rm -rf bumblebee-status
+
 # install zsh
 sudo pacman -S zsh --needed --noconfirm
 curl https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -o /tmp/install.sh &&

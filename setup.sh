@@ -117,8 +117,6 @@ gvm use go1.20
 
 # install python tools
 sudo pacman -S python-pip --noconfirm
-# this is really i3 specific so should move from this script yet, but using python to install so here we are.
-pip install --user bumblebee-status
 
 
 # install crypto stuff
