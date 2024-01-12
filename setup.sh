@@ -4,6 +4,7 @@ sudo curl -o $mirrorlist_file "https://archlinux.org/mirrorlist/?country=all&pro
 read -p "Enter the country for which you want to uncomment servers: " country
 sudo sed -i "/^## $country/,/^$/ s/^#Server/Server/" "$mirrorlist_file"
 echo "Servers for $country uncommented in $mirrorlist_file."
+sudo pacman -Syu
 
 cd ~/.config
 git init
@@ -69,6 +70,8 @@ sudo pacman -S nodejs pnpm --noconfirm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+pnpm setup
 
 # global npm packages
 pnpm add -g hardhat-shorthand
