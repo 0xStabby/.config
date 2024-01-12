@@ -18,7 +18,7 @@ sudo pacman -S papirus-icon-theme --noconfirm
 
 sudo pacman -S gnome-terminal ncdu --needed --noconfirm
 sudo pacman -S feh picom --noconfirm
-sudo pacman -S tmux --noconfirm
+sudo pacman -S tmux i3status --noconfirm
 
 git clone https://aur.archlinux.org/bumblebee-status.git
 cd bumblebee-status
