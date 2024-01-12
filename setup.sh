@@ -114,3 +114,9 @@ gvm use go1.20
 # dunno if I can move this yet
 # mv ~/.gvm ~/.config/.gvm
 # source ~/.config/bash/.bash_profile
+
+
+# install crypto stuff
+sudo pacman -S frame-eth --noconfirm
+
+# need to install firefox plugins as well yet
