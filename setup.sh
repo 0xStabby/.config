@@ -60,39 +60,7 @@ cd ../
 rm -rf rofi-repo
 
 # update mirrors
-echo "
-##
-## Manjaro Linux default mirrorlist
-## Generated on 2024-01-11 14:07
-##
-## Please use 'pacman-mirrors -f [NUMBER] [NUMBER]' to modify mirrorlist
-## (Use 0 for all mirrors)
-##
-
-## Country : Global
-Server = https://mirrors2.manjaro.org/stable/$repo/$arch
-
-## Country : United_States
-Server = https://ohioix.mm.fcix.net/manjaro/stable/$repo/$arch
-
-## Country : Belgium
-Server = https://mirror.futureweb.be/manjaro/stable/$repo/$arch
-
-## Country : Sweden
-Server = https://ftp.lysator.liu.se/pub/manjaro/stable/$repo/$arch
-
-## Country : Spain
-Server = https://ftp.caliu.cat/pub/distribucions/manjaro/stable/$repo/$arch
-
-## Country : Russia
-Server = https://mirror.truenetwork.ru/manjaro/stable/$repo/$arch
-
-## Country : Portugal
-Server = http://ftp.dei.uc.pt/pub/linux/manjaro/stable/$repo/$arch
-
-## Country : China
-Server = https://mirrors.tuna.tsinghua.edu.cn/manjaro/stable/$repo/$arch
-" | sudo tee /etc/pacman.d/mirrorlist > /dev/null
+sudo curl -o /etc/pacman.d/mirrorlist "https://archlinux.org/mirrorlist/?country=all&protocol=http&protocol=https&ip_version=4"
 sudo pacman -Syu
 
 # setup dev tools
