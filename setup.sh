@@ -55,3 +55,47 @@ chmod +x setup.sh
 # cleanup uneeded rofi-repo
 cd ../
 rm -rf rofi-repo
+
+
+# setup dev tools
+# first lets get nodejs/pnpm/nvm
+pacman -S nodejs pnpm --no-confirm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# global npm packages
+pnpm add -g hardhat-shorthand
+pnpm add -g hardhat-shorthand
+pnpm add -g @ethersproject/cli
+pnpm add -g @openapitools/openapi-generator-cli
+pnpm add -g @we-bump/lighthouse-cli
+pnpm add -g corepack
+pnpm add -g csvtojson
+pnpm add -g hardhat-shorthand
+pnpm add -g pm2
+pnpm add -g pnpm
+pnpm add -g serve
+pnpm add -g solc
+pnpm add -g turbo
+pnpm add -g vercel
+
+
+# get everything I could need for go
+pacman -S bison --no-confirm
+bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+gvm install go1.4
+gvm use go1.4 [--default]
+
+gvm install go1.4 -B
+gvm use go1.4
+export GOROOT_BOOTSTRAP=$GOROOT
+gvm install go1.7
+
+gvm use go1.4
+export GOROOT_BOOTSTRAP=$GOROOT
+gvm install go1.17.13
+gvm use go1.17.13
+export GOROOT_BOOTSTRAP=$GOROOT
+gvm install go1.20
+gvm use go1.20
