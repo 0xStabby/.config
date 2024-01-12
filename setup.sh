@@ -76,20 +76,19 @@ source ~/.bashrc
 pnpm setup
 
 # global npm packages
-pnpm add -g hardhat-shorthand
-pnpm add -g hardhat-shorthand
-pnpm add -g @ethersproject/cli
-pnpm add -g @openapitools/openapi-generator-cli
-pnpm add -g @we-bump/lighthouse-cli
-pnpm add -g corepack
-pnpm add -g csvtojson
-pnpm add -g hardhat-shorthand
-pnpm add -g pm2
-pnpm add -g pnpm
-pnpm add -g serve
-pnpm add -g solc
-pnpm add -g turbo
-pnpm add -g vercel
+pnpm add -g hardhat-shorthand \
+@ethersproject/cli \
+@openapitools/openapi-generator-cli \
+@we-bump/lighthouse-cli \
+corepack \
+csvtojson \
+hardhat-shorthand \
+pm2 \
+pnpm \
+serve \
+solc \
+turbo \
+vercel
 
 
 # get everything I could need for go
