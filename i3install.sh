@@ -11,8 +11,6 @@ sudo pacman -S rxvt-unicode ranger rofi dmenu --needed --noconfirm
 
 sudo pacman -S firefox vlc --needed --noconfirm
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 sudo pacman -S lxappearance --noconfirm
 
 sudo pacman -S arc-gtk-theme --noconfirm
@@ -21,6 +19,10 @@ sudo pacman -S papirus-icon-theme --noconfirm
 sudo pacman -S gnome-terminal ncdu --needed --noconfirm
 sudo pacman -S feh picom --noconfirm
 sudo pacman -S tmux --noconfirm
+
+# install zsh
+sudo pacman -S zsh --needed --noconfirm
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 sudo echo "[greeter]
    theme-name = Arc-Dark
