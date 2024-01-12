@@ -11,7 +11,7 @@ sudo pacman -S rxvt-unicode ranger rofi dmenu --needed --no-confirm
 
 sudo pacman -S firefox vlc --needed --no-confirm
 
-sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 sudo pacman -S lxappearance --no-confirm
 
