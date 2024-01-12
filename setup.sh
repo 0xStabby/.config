@@ -117,6 +117,6 @@ gvm use go1.20
 
 
 # install crypto stuff
-sudo pacman -S frame-eth --noconfirm
+yay -S frame-eth --noconfirm
 
 # need to install firefox plugins as well yet
