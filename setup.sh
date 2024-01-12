@@ -1,5 +1,9 @@
-echo "I need sudo later but will ask now"
-sudo echo "✅"
+# update mirrorlist
+mirrorlist_file="/etc/pacman.d/mirrorlist"
+sudo curl -o $mirrorlist_file "https://archlinux.org/mirrorlist/?country=all&protocol=http&protocol=https&ip_version=4"
+read -p "Enter the country for which you want to uncomment servers: " country
+sudo sed -i "/^## $country/,/^$/ s/^#Server/Server/" "$mirrorlist_file"
+echo "Servers for $country uncommented in $mirrorlist_file."
 
 cd ~/.config
 git init
@@ -58,10 +62,6 @@ chmod +x setup.sh
 # cleanup uneeded rofi-repo
 cd ../
 rm -rf rofi-repo
-
-# update mirrors
-sudo curl -o /etc/pacman.d/mirrorlist "https://archlinux.org/mirrorlist/?country=all&protocol=http&protocol=https&ip_version=4"
-sudo pacman -Syu
 
 # setup dev tools
 # first lets get nodejs/pnpm/nvm
