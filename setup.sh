@@ -92,7 +92,7 @@ vercel
 
 
 # install rust and cargo
-curl https://sh.rustup.rs -sSf | sh
+curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 # get everything I could need for go
 sudo pacman -S bison --noconfirm
