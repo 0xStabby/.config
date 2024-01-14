@@ -13,3 +13,6 @@
 [submodule "rofi"]
 	path = rofi
 	url = git@github.com:0xStabby/rofi.git
+[submodule "zsh"]
+	path = zsh
+	url = git@github.com:0xStabby/zsh.git
